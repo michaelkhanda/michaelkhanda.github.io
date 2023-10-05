@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!--  -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Michael..png" class="logo" alt="">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+
+            <!-- <div class="header-text">
+                <p>Junior Full Stack Developer</p>
+                <h1>Hi, I am <span>Michael</span><br>Khanda from Kenya 🇰🇪 </h1>
+            </div>
+
+            <div class="hero-image">
+                <img src="" alt="Volunteer Image" class="hero-image">
+            </div> -->
+
+            <div class="header-content">
+                <div class="header-text">
+                    <p id="role">Junior Full Stack Developer</p>
+                    <h1>Hi, I am <span>Michael</span><br>Khanda from Kenya 🇰🇪 </h1>
+                </div>
+
+                <div class="hero-image">
+                    <img src="images/khanda.jpeg" alt="Volunteer Image" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/khanda3.jpeg" alt="">
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About <span>Me</span></h1>
+                    <p id="about-bold">
+                        I am a passionate and dedicated student at USIU-Africa, where I am pursuing a degree in Applied
+                        Computer Technology
+                        with a concentration in <span>Forensic Information Technology and Cybercrime</span>. My journey
+                        in the tech industry began as
+                        a <span>Junior Full Stack Developer</span>, where I honed my skills in web development and
+                        software engineering. Over time,
+                        I tapped into the world of <span>data analysis</span>, where I discovered my love for working
+                        with data to uncover
+                        valuable insights.
+                        <br><br>
+                        Currently, I am looking for <span>internship</span> and <span>full time roles</span> that'll
+                        help advance my IT career by
+                        using my knowledge to deliver on-time, high-quality deliverables that benefit myself and the
+                        organization in question. I thrive in dynamic environments and enjoy solving complex problems.
+                        When I'm not working or studying, you can find me exploring the latest trends in technology or
+                        volunteering
+                        for community projects.
+                        <br><br>
+                        I am excited about the endless possibilities in the tech world and look forward to contributing
+                        my skills
+                        to make a positive impact in the field of Technology, particularly in the areas
+                        of Forensic
+                        Information Technology and Cybercrime, Data Analysis and Web Design/Development.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-end Development</span><br>Expertise in creating visually appealing and
+                                user-friendly interfaces for websites and applications. Proficient in <span>HTML</span>,
+                                <span>CSS</span>, <span>Bootsrap</span> and <span>JavaScript</span> to bring designs to
+                                life.</li>
+                            <li><span>Back-end Development</span><br>Skilled in building the server-side logic and
+                                databases that power web and app functionality. Proficient in programming languages like
+                                <span>Django</span>, <span>Flask</span>, <span>Node.js</span>, or <span>Express</span>
+                                for server-side development.</li>
+                            <li><span>Data Analysis in Python</span><br>Proficiency in using <span>Python</span> for
+                                data analysis tasks, including data cleaning, visualization, and statistical analysis.
+                                Capable of deriving meaningful insights from datasets to inform
+                                <span>decision-making</span> processes.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>October 2023 - Presesnt</span><br>Insights Intern <span>@East African Eye</span>
+                            </li>
+                            <li><span>Aug 2023 - September 2023</span><br>Digital and Innovations Intern <span>@Diamond
+                                    Trust Bank</span></li>
+                            <li><span>May 2023 - September 2023</span><br>Startup Incubatee <span>@Techbridge
+                                    Invest</span></li>
+                            <li><span>Mar 2023 - April 2023</span><br>Registration Assistant <span>@Worldwide
+                                    Educonnect</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>September 2023 - December 2023</span><br>Web Development <span>@E-mobilis
+                                    Technology Institute</span></li>
+                            <li><span>September 2020 - December 2023</span><br>BSc. Applied Computer Technology
+                                <span>@USIU-A</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title"><span>My</span> Techstack:</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fab fa-js"></i>
+                    <h2>JavaScript</h2>
+                    <p>Programming language for web development</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-html5"></i>
+                    <h2>HTML</h2>
+                    <p>Standard markup language for web pages</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-css3-alt"></i>
+                    <h2>CSS</h2>
+                    <p>Cascading Style Sheets for web design</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-bootstrap"></i>
+                    <h2>Bootstrap</h2>
+                    <p>Front-end framework for responsive web design</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-python"></i>
+                    <h2>Python</h2>
+                    <p>High-level programming language</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-node-js"></i>
+                    <h2>Node.js</h2>
+                    <p>Runtime environment for server-side JavaScript</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-node-js"></i>
+                    <h2>Express</h2>
+                    <p>Web application framework for Node.js</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-figma"></i>
+                    <h2>Figma</h2>
+                    <p>Collaborative interface design tool</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-linux"></i>
+                    <h2>Linux</h2>
+                    <p>Proficiency in Linux operating systems</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-python"></i>
+                    <h2>Flask and Django</h2>
+                    <p>Lightweight web framework for Python</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"><span>My</span> Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/Screenshot 2023-10-06 at 00.44.54.png" alt="">
+                    <div class="layer">
+                        <h3>Uhuru Park Website</h3>
+                        <p>The Uhuru Park Website is a visually appealing and informative online platform. It provides
+                            visitors with information about Uhuru Park, including its history, attractions, and events.
+                            The website is designed to engage users and offer a seamless browsing experience.</p>
+                        <a href="https://github.com/michaelkhanda/uhuru-park-project"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Screenshot 2023-10-06 at 00.40.40.png" alt="">
+                    <div class="layer">
+                        <h3>USIU-A Community Service WebApp</h3>
+                        <p>The USIU-A Community Service WebApp is a web application developed for the United States
+                            International University Africa (USIU-A) community. It facilitates community service
+                            initiatives, allowing users to discover, participate in, and coordinate various service
+                            projects.</p>
+                        <a href="https://github.com/michaelkhanda/voluntary-management-system"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Screenshot 2023-10-06 at 00.43.02.png" alt="">
+                    <div class="layer">
+                        <h3>FIFA 2023 Final Analysis</h3>
+                        <p>The FIFA 2023 Final Analysis project involves in-depth research and analysis of the FIFA
+                            World Cup 2023 final match. This analysis is a valuable resource
+                            for football enthusiasts and researchers interested in the tournament's final showdown.</p>
+                        <a href="https://github.com/michaelkhanda/ea-eye-interview-assessment"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="https://github.com/michaelkhanda" class="btn">See more</a>
+
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact <span>Me</span></h1>
+                    <p><i class="fas fa-paper-plane"></i> michaelkhanda006@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>0792244130</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/michaelkhanda"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/michael-k-0a5874127/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://medium.com/@michaelkhanda006"><i class="fa-brands fa-medium"></i></a>
+                    </div>
+                    <a href="images/Michael Khanda's Resume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©2023 Design inspiration by <span>Greatstack. </span>Built by Michael Khanda🇰🇪 </p>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+
+    function opentab(tabname) {
+        for (i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].style.display = 'none';
+        }
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace('active-link', '');
+        }
+        document.getElementById(tabname).style.display = 'block';
+        event.currentTarget.className += ' active-link';
+    }
+
+    var sidemenu = document.getElementById('sidemenu');
+
+    function openmenu() {
+        sidemenu.style.right = '0';
+    }
+    function closemenu() {
+        sidemenu.style.right = '-200px';
+    }
+
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxy6J-SSCz5zcCVh2-rKc5JqKyz1d_5Vw_05B4vWN-BjK7Lb2uGBD3fAgTxrOh1dyZ-EQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                console.log('Success!', response)
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function () {
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
+<script>
+    // Array of roles
+    const roles = [
+        "Junior Full Stack Developer",
+        "Data Analyst in Python",
+        "Javascript Developer",
+        "PowerBI Expert",
+        "CTF Player",
+        "Cyber Security Enthusiast",
+    ];
+
+    const roleElement = document.getElementById("role");
+    let currentRoleIndex = 0;
+    let currentCharacterIndex = 0;
+    let typingSpeed = 100; // Adjust the typing speed (milliseconds per character)
+
+    function typeRole() {
+        const currentRole = roles[currentRoleIndex];
+        if (currentCharacterIndex < currentRole.length) {
+            roleElement.textContent = currentRole.substring(0, currentCharacterIndex + 1);
+            currentCharacterIndex++;
+            setTimeout(typeRole, typingSpeed);
+        } else {
+            setTimeout(eraseRole, 1000); // Wait for 1 second before erasing
+        }
+    }
+
+    function eraseRole() {
+        if (currentCharacterIndex > 0) {
+            const currentRole = roles[currentRoleIndex];
+            roleElement.textContent = currentRole.substring(0, currentCharacterIndex - 1);
+            currentCharacterIndex--;
+            setTimeout(eraseRole, typingSpeed / 2); // Erase faster
+        } else {
+            currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+            setTimeout(typeRole, 1000); // Wait for 1 second before typing the next role
+        }
+    }
+
+    // Start the typing animation
+    typeRole();
+</script>
+
+
+</html>
