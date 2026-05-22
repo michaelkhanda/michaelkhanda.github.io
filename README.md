@@ -1,6 +1,6 @@
 # michaelkhanda.github.io
 
-CTF writeups and security research. Built with Jekyll, hosted on GitHub Pages.
+Personal portfolio. I store everything I'm learning here — CTF writeups, security research, and notes. Built with Jekyll, hosted on GitHub Pages.
 
 ## Adding a post
 
@@ -24,7 +24,7 @@ Categories: `forensics` `web` `pwn` `osint` `crypto` `rev`
 ## Local dev
 
 ```bash
-blog
+bundle exec jekyll serve --livereload
 ```
 
 Live at [michaelkhanda.github.io](https://michaelkhanda.github.io)
