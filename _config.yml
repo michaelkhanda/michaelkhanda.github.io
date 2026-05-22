@@ -1,0 +1,48 @@
+# Site settings
+title: Michael Khanda
+description: CTF Writeups & Cybersecurity Research
+author: Michael Khanda
+email: michaelkhanda006@gmail.com
+url: "https://michaelkhanda.github.io"
+baseurl: ""
+
+# Social links
+github_username: michaelkhanda
+linkedin_username: michaelkhanda
+medium_username: michaelkhanda
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Permalink structure
+permalink: /:year/:month/:day/:title/
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /writeups/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Michael Khanda"
