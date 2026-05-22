@@ -13,10 +13,24 @@ medium_username: michaelkhanda
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    block:
+      line_numbers: false
+
+header_pages:
+  - index.md
+  - posts.html
+  - about.md
+  - categories.html
 
 # Permalink structure
 permalink: /:year/:month/:day/:title/

@@ -1,0 +1,32 @@
+---
+layout: default
+title: 404
+permalink: /404.html
+---
+
+<div class="hero" style="padding-bottom: 4rem;">
+  <div class="terminal-block">
+    <div class="terminal-bar">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="tab-label">bash — 80x24</span>
+    </div>
+    <div class="terminal-body">
+      <div><span class="prompt">$</span> <span class="cmd">curl {{ page.url }}</span></div>
+      <div class="out" style="color: var(--accent-red);">curl: (404) Not Found</div>
+      <div class="blank"></div>
+      <div><span class="prompt">$</span> <span class="cmd">cat error.txt</span></div>
+      <div class="out">This page doesn't exist or has been moved.</div>
+      <div class="blank"></div>
+      <div><span class="prompt">$</span> <span class="cmd">ls ~/</span></div>
+      <div class="out">
+        <a href="{{ "/" | relative_url }}" style="color: var(--accent-green); text-decoration: none;">home/</a>
+        &nbsp;&nbsp;
+        <a href="{{ "/posts" | relative_url }}" style="color: var(--accent-blue); text-decoration: none;">posts/</a>
+        &nbsp;&nbsp;
+        <a href="{{ "/about" | relative_url }}" style="color: var(--text-secondary); text-decoration: none;">about/</a>
+      </div>
+    </div>
+  </div>
+</div>

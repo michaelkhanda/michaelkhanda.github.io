@@ -1,0 +1,52 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<div class="categories-page">
+  <h1 class="page-heading">Writeups</h1>
+  <p class="page-subheading">browse by category</p>
+
+  {%- assign categories = site.posts | map: "categories" | flatten | uniq | sort -%}
+
+  {%- assign cat_colors = "forensics:#3fb950,web:#58a6ff,pwn:#f85149,binary:#f85149,osint:#d29922,crypto:#bc8cff,rev:#ffa657,reversing:#ffa657,ctf:#8b949e,writeup:#8b949e,misc:#6e7681" -%}
+
+  {%- for cat in categories -%}
+    {%- assign cat_posts = site.posts | where_exp: "post", "post.categories contains cat" -%}
+    {%- if cat_posts.size > 0 -%}
+
+      {%- assign color = "#8b949e" -%}
+      {%- assign cat_lower = cat | downcase -%}
+      {%- if cat_lower == "forensics" -%}{%- assign color = "#3fb950" -%}
+      {%- elsif cat_lower == "web" -%}{%- assign color = "#58a6ff" -%}
+      {%- elsif cat_lower == "pwn" or cat_lower == "binary" -%}{%- assign color = "#f85149" -%}
+      {%- elsif cat_lower == "osint" -%}{%- assign color = "#d29922" -%}
+      {%- elsif cat_lower == "crypto" -%}{%- assign color = "#bc8cff" -%}
+      {%- elsif cat_lower == "rev" or cat_lower == "reversing" -%}{%- assign color = "#ffa657" -%}
+      {%- endif -%}
+
+      <section class="category-section" id="{{ cat | slugify }}">
+        <h2 class="category-title">
+          <span class="cat-dot" style="background: {{ color }}"></span>
+          {{ cat }}
+          <span class="count">({{ cat_posts | size }})</span>
+        </h2>
+
+        {%- for post in cat_posts -%}
+          <div class="post-list-item">
+            <span class="item-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            <a class="item-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </div>
+        {%- endfor -%}
+      </section>
+
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if site.posts.size == 0 -%}
+    <p style="color: var(--text-muted); font-family: var(--font-mono);">
+      No writeups yet &mdash; check back after the next CTF.
+    </p>
+  {%- endif -%}
+</div>

@@ -1,0 +1,41 @@
+---
+layout: default
+title: Posts
+permalink: /posts/
+---
+
+<div class="categories-page">
+  <h1 class="page-heading">Posts</h1>
+  <p class="page-subheading">{{ site.posts | size }} writeup(s) total</p>
+
+  {%- assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+
+  {%- for year_group in posts_by_year -%}
+    <section class="category-section">
+      <h2 class="category-title">
+        <span class="cat-dot" style="background: var(--accent-green)"></span>
+        {{ year_group.name }}
+        <span class="count">({{ year_group.items | size }})</span>
+      </h2>
+
+      {%- assign sorted_posts = year_group.items | sort: "date" | reverse -%}
+      {%- for post in sorted_posts -%}
+        <div class="post-list-item">
+          <span class="item-date">{{ post.date | date: "%b %-d" }}</span>
+          <a class="item-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span style="margin-left: auto; display: flex; gap: 0.4rem; flex-shrink: 0;">
+            {%- for cat in post.categories limit:2 -%}
+              {%- unless cat == "ctf" or cat == "writeup" -%}
+                <span class="badge {{ cat | downcase }}">{{ cat }}</span>
+              {%- endunless -%}
+            {%- endfor -%}
+          </span>
+        </div>
+      {%- endfor -%}
+    </section>
+  {%- endfor -%}
+
+  {%- if site.posts.size == 0 -%}
+    <p style="color: var(--text-muted); font-family: var(--font-mono);">No posts yet.</p>
+  {%- endif -%}
+</div>

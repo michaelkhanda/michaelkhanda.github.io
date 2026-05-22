@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+<div id="reading-progress" role="progressbar" aria-hidden="true"></div>
+
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <div class="post-badges">
+      {%- for cat in page.categories -%}
+        <span class="badge {{ cat | downcase | replace: ' ', '-' }}">{{ cat }}</span>
+      {%- endfor -%}
+    </div>
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <div class="post-meta">
+      <span>
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/>
+        </svg>
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: "%B %-d, %Y" }}
+        </time>
+      </span>
+      {%- if page.author -%}
+        <span>
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M10.561 8.073a6.005 6.005 0 013.432 5.142.75.75 0 11-1.498.07 4.5 4.5 0 00-8.99 0 .75.75 0 01-1.498-.07 6.004 6.004 0 013.431-5.142 3.999 3.999 0 116.123 0zM10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+          </svg>
+          {{ page.author }}
+        </span>
+      {%- endif -%}
+      {%- assign words = page.content | number_of_words -%}
+      {%- assign mins = words | divided_by: 200 | plus: 1 -%}
+      <span>{{ mins }} min read</span>
+    </div>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    {%- if page.tags.size > 0 -%}
+      <div class="post-tags">
+        <span class="tags-label">#</span>
+        {%- for tag in page.tags -%}
+          <a class="tag-link" href="{{ "/categories" | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    <div class="post-nav">
+      {%- if page.previous.url -%}
+        <a href="{{ page.previous.url | relative_url }}" class="prev">
+          <span class="nav-label">&larr; Previous</span>
+          <span class="nav-title">{{ page.previous.title | truncatewords: 8 }}</span>
+        </a>
+      {%- else -%}
+        <div></div>
+      {%- endif -%}
+      {%- if page.next.url -%}
+        <a href="{{ page.next.url | relative_url }}" class="next">
+          <span class="nav-label">Next &rarr;</span>
+          <span class="nav-title">{{ page.next.title | truncatewords: 8 }}</span>
+        </a>
+      {%- endif -%}
+    </div>
+  </footer>
+
+</article>
