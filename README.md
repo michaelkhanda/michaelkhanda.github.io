@@ -1,6 +1,6 @@
 # michaelkhanda.github.io
 
-Personal portfolio. I store everything I'm learning here — CTF writeups, security research, and notes. Built with Jekyll, hosted on GitHub Pages.
+Personal Portfolio. I store all information about what I am learning on this blog.
 
 ## Adding a post
 
